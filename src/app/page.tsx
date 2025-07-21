@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { getPosts } from "@/lib/posts";
+import { Post } from "@/components/feature/post";
 
 export default async function Home() {
   const posts = await getPosts();
@@ -23,25 +23,7 @@ export default async function Home() {
           {posts.length > 0 ? (
             <div className="grid gap-6">
               {posts.map((post) => (
-                <Link
-                  key={post.slug}
-                  href={post.path}
-                  className="group block p-8 bg-card rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/30"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="text-2xl font-semibold text-card-foreground group-hover:text-primary transition-colors">
-                        {post.title}
-                      </h3>
-                      <p className="text-muted-foreground mt-2">
-                        Click to read more
-                      </p>
-                    </div>
-                    <div className="text-primary group-hover:translate-x-1 transition-transform">
-                      →
-                    </div>
-                  </div>
-                </Link>
+                <Post key={post.slug} post={post} />
               ))}
             </div>
           ) : (
