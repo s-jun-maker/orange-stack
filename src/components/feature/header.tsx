@@ -3,15 +3,15 @@ import { ThemeToggle } from "@/components/feature/theme-toggle";
 
 const navigationItems = [
   { name: "Home", href: "/" },
-  { name: "Posts", href: "/" },
-  { name: "About", href: "/" },
-  { name: "Contact", href: "/" },
+  // { name: "Posts", href: "/" },
+  // { name: "About", href: "/" },
+  // { name: "Contact", href: "/" },
 ];
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center px-6">
+      <div className="flex h-16 w-full items-center px-6">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="hidden font-bold sm:inline-block text-primary">
@@ -23,7 +23,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="transition-colors hover:text-primary text-muted-foreground hover:text-foreground"
+                className="transition-colors hover:text-primary text-muted-foreground"
               >
                 {item.name}
               </Link>
