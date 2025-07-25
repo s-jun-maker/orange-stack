@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -45,47 +46,47 @@
 
 :root {
   --radius: 0.625rem;
-  
+
   /* Claude AI-inspired palette - Light mode */
   /* Cozy whites with warm undertones */
-  --background: oklch(0.99 0.005 85);          /* Warm off-white */
-  --foreground: oklch(0.15 0.02 25);           /* Deep charcoal with warm hint */
-  --card: oklch(0.985 0.008 85);               /* Subtle warm card background */
+  --background: oklch(0.99 0.005 85); /* Warm off-white */
+  --foreground: oklch(0.15 0.02 25); /* Deep charcoal with warm hint */
+  --card: oklch(0.985 0.008 85); /* Subtle warm card background */
   --card-foreground: oklch(0.15 0.02 25);
   --popover: oklch(0.99 0.005 85);
   --popover-foreground: oklch(0.15 0.02 25);
-  
+
   /* Toned-down orange as primary */
-  --primary: oklch(0.65 0.15 45);              /* Soft burnt orange */
+  --primary: oklch(0.65 0.15 45); /* Soft burnt orange */
   --primary-foreground: oklch(0.99 0.005 85);
-  
+
   /* Neutral secondary with warm undertones */
-  --secondary: oklch(0.94 0.01 85);            /* Warm light grey */
+  --secondary: oklch(0.94 0.01 85); /* Warm light grey */
   --secondary-foreground: oklch(0.25 0.02 25);
-  
+
   /* Muted colors with cozy feeling */
-  --muted: oklch(0.96 0.008 85);               /* Very light warm grey */
-  --muted-foreground: oklch(0.45 0.015 25);    /* Medium grey with warmth */
-  
+  --muted: oklch(0.96 0.008 85); /* Very light warm grey */
+  --muted-foreground: oklch(0.45 0.015 25); /* Medium grey with warmth */
+
   /* Accent similar to primary but lighter */
-  --accent: oklch(0.92 0.04 45);               /* Light peachy accent */
+  --accent: oklch(0.92 0.04 45); /* Light peachy accent */
   --accent-foreground: oklch(0.25 0.02 25);
-  
+
   /* Destructive red with warm undertones */
-  --destructive: oklch(0.62 0.22 25);          /* Warm red */
-  
+  --destructive: oklch(0.62 0.22 25); /* Warm red */
+
   /* Borders and inputs */
-  --border: oklch(0.88 0.015 85);              /* Warm light border */
-  --input: oklch(0.92 0.01 85);                /* Input background */
-  --ring: oklch(0.65 0.12 45);                 /* Focus ring - muted orange */
-  
+  --border: oklch(0.88 0.015 85); /* Warm light border */
+  --input: oklch(0.92 0.01 85); /* Input background */
+  --ring: oklch(0.65 0.12 45); /* Focus ring - muted orange */
+
   /* Chart colors - warm palette */
-  --chart-1: oklch(0.65 0.15 45);              /* Primary orange */
-  --chart-2: oklch(0.55 0.12 200);             /* Muted blue */
-  --chart-3: oklch(0.6 0.14 140);              /* Soft green */
-  --chart-4: oklch(0.7 0.18 25);               /* Warm terracotta */
-  --chart-5: oklch(0.68 0.16 85);              /* Peachy yellow */
-  
+  --chart-1: oklch(0.65 0.15 45); /* Primary orange */
+  --chart-2: oklch(0.55 0.12 200); /* Muted blue */
+  --chart-3: oklch(0.6 0.14 140); /* Soft green */
+  --chart-4: oklch(0.7 0.18 25); /* Warm terracotta */
+  --chart-5: oklch(0.68 0.16 85); /* Peachy yellow */
+
   /* Sidebar - cozy theme */
   --sidebar: oklch(0.97 0.008 85);
   --sidebar-foreground: oklch(0.2 0.02 25);
@@ -100,44 +101,44 @@
 .dark {
   /* Claude AI-inspired palette - Dark mode */
   /* Rich dark backgrounds with subtle warmth */
-  --background: oklch(0.12 0.015 25);           /* Deep warm charcoal */
-  --foreground: oklch(0.95 0.01 85);            /* Warm off-white text */
-  --card: oklch(0.15 0.02 25);                  /* Slightly lighter card */
+  --background: oklch(0.12 0.015 25); /* Deep warm charcoal */
+  --foreground: oklch(0.95 0.01 85); /* Warm off-white text */
+  --card: oklch(0.15 0.02 25); /* Slightly lighter card */
   --card-foreground: oklch(0.95 0.01 85);
   --popover: oklch(0.15 0.02 25);
   --popover-foreground: oklch(0.95 0.01 85);
-  
+
   /* Brighter orange for dark mode visibility */
-  --primary: oklch(0.72 0.18 45);               /* Vibrant but warm orange */
+  --primary: oklch(0.72 0.18 45); /* Vibrant but warm orange */
   --primary-foreground: oklch(0.12 0.015 25);
-  
+
   /* Dark secondary with warm undertones */
-  --secondary: oklch(0.22 0.02 25);             /* Warm dark grey */
+  --secondary: oklch(0.22 0.02 25); /* Warm dark grey */
   --secondary-foreground: oklch(0.9 0.01 85);
-  
+
   /* Muted dark colors */
-  --muted: oklch(0.18 0.02 25);                 /* Muted dark background */
-  --muted-foreground: oklch(0.65 0.015 45);     /* Muted orange-tinted text */
-  
+  --muted: oklch(0.18 0.02 25); /* Muted dark background */
+  --muted-foreground: oklch(0.65 0.015 45); /* Muted orange-tinted text */
+
   /* Dark accent */
-  --accent: oklch(0.25 0.05 45);                /* Dark peachy accent */
+  --accent: oklch(0.25 0.05 45); /* Dark peachy accent */
   --accent-foreground: oklch(0.9 0.01 85);
-  
+
   /* Destructive red for dark mode */
-  --destructive: oklch(0.68 0.25 25);           /* Bright warm red */
-  
+  --destructive: oklch(0.68 0.25 25); /* Bright warm red */
+
   /* Dark borders and inputs */
-  --border: oklch(0.25 0.02 25);                /* Warm dark border */
-  --input: oklch(0.18 0.02 25);                 /* Input background */
-  --ring: oklch(0.72 0.15 45);                  /* Focus ring - bright orange */
-  
+  --border: oklch(0.25 0.02 25); /* Warm dark border */
+  --input: oklch(0.18 0.02 25); /* Input background */
+  --ring: oklch(0.72 0.15 45); /* Focus ring - bright orange */
+
   /* Dark chart colors */
-  --chart-1: oklch(0.72 0.18 45);               /* Primary orange */
-  --chart-2: oklch(0.6 0.15 200);               /* Muted blue */
-  --chart-3: oklch(0.65 0.16 140);              /* Soft green */
-  --chart-4: oklch(0.68 0.2 25);                /* Warm terracotta */
-  --chart-5: oklch(0.7 0.18 85);                /* Peachy yellow */
-  
+  --chart-1: oklch(0.72 0.18 45); /* Primary orange */
+  --chart-2: oklch(0.6 0.15 200); /* Muted blue */
+  --chart-3: oklch(0.65 0.16 140); /* Soft green */
+  --chart-4: oklch(0.68 0.2 25); /* Warm terracotta */
+  --chart-5: oklch(0.7 0.18 85); /* Peachy yellow */
+
   /* Dark sidebar */
   --sidebar: oklch(0.1 0.015 25);
   --sidebar-foreground: oklch(0.9 0.01 85);

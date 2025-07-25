@@ -1,12 +1,7 @@
 import Link from "next/link";
 import { ThemeToggle } from "@/components/feature/theme-toggle";
-
-const navigationItems = [
-  { name: "Home", href: "/" },
-  // { name: "Posts", href: "/" },
-  // { name: "About", href: "/" },
-  // { name: "Contact", href: "/" },
-];
+import { MobileNav } from "@/components/feature/mobile-nav";
+import { navigationItems } from "@/lib/navigation";
 
 export function Header() {
   return (
@@ -39,8 +34,9 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Dark mode toggle */}
+          {/* Mobile menu and dark mode toggle */}
           <div className="flex items-center space-x-2">
+            <MobileNav />
             <ThemeToggle />
           </div>
         </div>
