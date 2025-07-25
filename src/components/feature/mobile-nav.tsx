@@ -29,7 +29,10 @@ export function MobileNav() {
           <Menu className="h-5 w-5" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
+      <SheetContent
+        side="left"
+        className="w-[300px] sm:w-[400px] bg-background"
+      >
         <SheetHeader className="px-6 py-6">
           <SheetTitle className="text-left text-2xl font-semibold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             Orange Stack

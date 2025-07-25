@@ -22,7 +22,7 @@ export async function getPosts(): Promise<Post[]> {
         folder.charAt(0).toUpperCase() + folder.slice(1).replace(/-/g, " "),
       path: `/posts/${folder}`,
     }));
-  } catch (error) {
+  } catch {
     return [];
   }
 }
@@ -47,7 +47,7 @@ export async function getEnglishs(): Promise<Post[]> {
         folder.charAt(0).toUpperCase() + folder.slice(1).replace(/-/g, " "),
       path: `/englishs/${folder}`,
     }));
-  } catch (error) {
+  } catch {
     return [];
   }
 }
