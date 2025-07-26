@@ -1,6 +1,8 @@
 "use server";
+
 import { readdir } from "fs/promises";
 import path from "path";
+import { eq } from "drizzle-orm";
 import { bbcContentTable, db } from "@/db";
 
 export interface Post {
@@ -75,4 +77,14 @@ export async function getBBCList(
       hasMore: false,
     };
   }
+}
+
+export async function generateBBCPost(contentId: number) {
+  const content = await db
+    .select()
+    .from(bbcContentTable)
+    .where(eq(bbcContentTable.id, contentId))
+    .limit(1);
+
+  return content[0];
 }

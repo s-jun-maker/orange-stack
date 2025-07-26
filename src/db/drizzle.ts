@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-import * as schema from "../db/schema";
+import * as schema from "./schema";
 
 if (!global.postgres) {
   global.postgres = postgres(process.env.DATABASE_URL!);

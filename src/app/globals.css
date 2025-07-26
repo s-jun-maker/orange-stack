@@ -100,16 +100,16 @@
 .dark {
   /* Claude AI-inspired palette - Dark mode */
   /* Rich dark backgrounds with subtle warmth */
-  --background: oklch(0.12 0.015 25); /* Deep warm charcoal */
+  --background: oklch(0.27 0.004 107); /* Deep warm charcoal */
   --foreground: oklch(0.95 0.01 85); /* Warm off-white text */
-  --card: oklch(0.15 0.02 25); /* Slightly lighter card */
+  --card: oklch(24% 1% 63deg); /* Slightly lighter card */
   --card-foreground: oklch(0.95 0.01 85);
   --popover: oklch(0.15 0.02 25);
   --popover-foreground: oklch(0.95 0.01 85);
 
   /* Brighter orange for dark mode visibility */
   --primary: oklch(0.72 0.18 45); /* Vibrant but warm orange */
-  --primary-foreground: oklch(0.12 0.015 25);
+  --primary-foreground: oklch(0.27 0.004 107);
 
   /* Dark secondary with warm undertones */
   --secondary: oklch(0.22 0.02 25); /* Warm dark grey */
@@ -127,7 +127,7 @@
   --destructive: oklch(0.68 0.25 25); /* Bright warm red */
 
   /* Dark borders and inputs */
-  --border: oklch(0.25 0.02 25); /* Warm dark border */
+  --border: oklch(37% 2% 107deg); /* Darker warm border */
   --input: oklch(0.18 0.02 25); /* Input background */
   --ring: oklch(0.72 0.15 45); /* Focus ring - bright orange */
 
@@ -142,7 +142,7 @@
   --sidebar: oklch(0.1 0.015 25);
   --sidebar-foreground: oklch(0.9 0.01 85);
   --sidebar-primary: oklch(0.72 0.18 45);
-  --sidebar-primary-foreground: oklch(0.12 0.015 25);
+  --sidebar-primary-foreground: oklch(0.27 0.004 107);
   --sidebar-accent: oklch(0.25 0.05 45);
   --sidebar-accent-foreground: oklch(0.9 0.01 85);
   --sidebar-border: oklch(0.25 0.02 25);
@@ -156,112 +156,4 @@
   body {
     @apply bg-background text-foreground;
   }
-}
-
-/* Custom Audio Player Styles - Minimal Play/Pause Only */
-.minimal-audio-player.rhap_container {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: auto !important;
-  height: auto !important;
-}
-
-/* Hide all sections except main controls */
-.minimal-audio-player .rhap_progress-section,
-.minimal-audio-player .rhap_volume-section,
-.minimal-audio-player .rhap_additional-controls,
-.minimal-audio-player .rhap_time {
-  display: none !important;
-}
-
-.minimal-audio-player .rhap_main-controls {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-.minimal-audio-player .rhap_main-controls-button {
-  width: 3.5rem !important;
-  height: 3.5rem !important;
-  background-color: oklch(var(--primary)) !important;
-  color: oklch(var(--primary-foreground)) !important;
-  border: none !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: all 0.2s ease !important;
-  box-shadow: 0 2px 8px oklch(var(--primary) / 0.2) !important;
-}
-
-.minimal-audio-player .rhap_main-controls-button:hover {
-  background-color: oklch(var(--primary) / 0.9) !important;
-  transform: scale(1.05) !important;
-  box-shadow: 0 4px 12px oklch(var(--primary) / 0.3) !important;
-}
-
-.minimal-audio-player .rhap_main-controls-button svg {
-  width: 1.25rem !important;
-  height: 1.25rem !important;
-}
-
-.rhap_main-controls-button {
-  color: oklch(var(--primary)) !important;
-  transition: color 0.2s ease !important;
-}
-
-.rhap_main-controls-button:hover {
-  color: oklch(var(--primary) / 0.8) !important;
-}
-
-.rhap_progress-filled {
-  background-color: oklch(var(--primary)) !important;
-}
-
-.rhap_progress-indicator {
-  background-color: oklch(var(--primary)) !important;
-  border: 2px solid oklch(var(--card)) !important;
-  box-shadow: 0 0 0 1px oklch(var(--primary)) !important;
-}
-
-.rhap_progress-bar {
-  background-color: oklch(var(--muted)) !important;
-  border-radius: var(--radius) !important;
-}
-
-.rhap_time {
-  color: oklch(var(--muted-foreground)) !important;
-  font-size: 0.875rem !important;
-}
-
-.rhap_volume-indicator {
-  background-color: oklch(var(--primary)) !important;
-}
-
-.rhap_volume-bar {
-  background-color: oklch(var(--muted)) !important;
-  border-radius: var(--radius) !important;
-}
-
-.rhap_volume-controls button {
-  color: oklch(var(--muted-foreground)) !important;
-  transition: color 0.2s ease !important;
-}
-
-.rhap_volume-controls button:hover {
-  color: oklch(var(--foreground)) !important;
-}
-
-.rhap_download-progress {
-  background-color: oklch(var(--muted) / 0.5) !important;
-}
-
-.rhap_progress-container {
-  margin: 0.5rem 0 !important;
 }
