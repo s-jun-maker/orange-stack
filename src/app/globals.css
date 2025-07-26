@@ -157,3 +157,111 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom Audio Player Styles - Minimal Play/Pause Only */
+.minimal-audio-player.rhap_container {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* Hide all sections except main controls */
+.minimal-audio-player .rhap_progress-section,
+.minimal-audio-player .rhap_volume-section,
+.minimal-audio-player .rhap_additional-controls,
+.minimal-audio-player .rhap_time {
+  display: none !important;
+}
+
+.minimal-audio-player .rhap_main-controls {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.minimal-audio-player .rhap_main-controls-button {
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  background-color: oklch(var(--primary)) !important;
+  color: oklch(var(--primary-foreground)) !important;
+  border: none !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 8px oklch(var(--primary) / 0.2) !important;
+}
+
+.minimal-audio-player .rhap_main-controls-button:hover {
+  background-color: oklch(var(--primary) / 0.9) !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 12px oklch(var(--primary) / 0.3) !important;
+}
+
+.minimal-audio-player .rhap_main-controls-button svg {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+
+.rhap_main-controls-button {
+  color: oklch(var(--primary)) !important;
+  transition: color 0.2s ease !important;
+}
+
+.rhap_main-controls-button:hover {
+  color: oklch(var(--primary) / 0.8) !important;
+}
+
+.rhap_progress-filled {
+  background-color: oklch(var(--primary)) !important;
+}
+
+.rhap_progress-indicator {
+  background-color: oklch(var(--primary)) !important;
+  border: 2px solid oklch(var(--card)) !important;
+  box-shadow: 0 0 0 1px oklch(var(--primary)) !important;
+}
+
+.rhap_progress-bar {
+  background-color: oklch(var(--muted)) !important;
+  border-radius: var(--radius) !important;
+}
+
+.rhap_time {
+  color: oklch(var(--muted-foreground)) !important;
+  font-size: 0.875rem !important;
+}
+
+.rhap_volume-indicator {
+  background-color: oklch(var(--primary)) !important;
+}
+
+.rhap_volume-bar {
+  background-color: oklch(var(--muted)) !important;
+  border-radius: var(--radius) !important;
+}
+
+.rhap_volume-controls button {
+  color: oklch(var(--muted-foreground)) !important;
+  transition: color 0.2s ease !important;
+}
+
+.rhap_volume-controls button:hover {
+  color: oklch(var(--foreground)) !important;
+}
+
+.rhap_download-progress {
+  background-color: oklch(var(--muted) / 0.5) !important;
+}
+
+.rhap_progress-container {
+  margin: 0.5rem 0 !important;
+}
