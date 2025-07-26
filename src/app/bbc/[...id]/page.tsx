@@ -31,7 +31,7 @@ export default async function BBCPage({ params }: PageProps) {
     const content = result[0];
 
     return (
-      <BBCContentRenderer 
+      <BBCContentRenderer
         title={content.title}
         content={content.content}
         audioUrl={content.audio_url}
@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: PageProps) {
     return {
       title: result[0].title,
     };
-  } catch (error) {
+  } catch {
     return {
       title: "BBC Learning English",
     };
