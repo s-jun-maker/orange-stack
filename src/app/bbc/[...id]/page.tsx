@@ -3,13 +3,13 @@ import { eq } from "drizzle-orm";
 import { db, bbcContentTable } from "@/db";
 import BBCContentRenderer from "@/components/feature/BBCContentRenderer";
 
-interface PageProps {
+type BBCPageProps = {
   params: Promise<{
     id: string[];
   }>;
-}
+};
 
-export default async function BBCPage({ params }: PageProps) {
+export default async function BBCPage({ params }: BBCPageProps) {
   const { id } = await params;
   const contentId = parseInt(id[0]);
 
@@ -43,7 +43,7 @@ export default async function BBCPage({ params }: PageProps) {
   }
 }
 
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({ params }: BBCPageProps) {
   const { id } = await params;
   const contentId = parseInt(id[0]);
 

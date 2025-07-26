@@ -2,11 +2,12 @@ import Link from "next/link";
 import { getBBCList } from "@/lib/posts";
 
 interface BBCPageProps {
-  searchParams: { page?: string };
+  searchParams: Promise<{ page?: string }>;
 }
 
 export default async function BBCPage({ searchParams }: BBCPageProps) {
-  const currentPage = Number(searchParams.page) || 1;
+  const { page } = await searchParams;
+  const currentPage = Number(page) || 1;
   const { items: bbcItems, totalCount, hasMore } = await getBBCList(currentPage, 8);
 
   return (
