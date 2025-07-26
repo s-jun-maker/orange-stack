@@ -8,6 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Build for production**: `npm run build`
 - **Start production server**: `npm start`
 - **Lint code**: `npm run lint`
+- Use pnpm rather than npm.
 
 ## Project Architecture
 
