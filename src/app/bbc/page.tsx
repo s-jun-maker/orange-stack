@@ -72,11 +72,11 @@ export default async function BBCPage({ searchParams }: BBCPageProps) {
                   Previous
                 </Link>
               )}
-              
+
               <span className="text-muted-foreground">
                 Page {currentPage} of {Math.ceil(totalCount / 8)}
               </span>
-              
+
               {hasMore && (
                 <Link
                   href={`/bbc?page=${currentPage + 1}`}
