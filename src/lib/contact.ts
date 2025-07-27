@@ -1,7 +1,6 @@
 "use server";
 
 import { contactMessagesTable, db } from "@/db";
-import { redirect } from "next/navigation";
 
 export interface ContactFormData {
   firstName: string;

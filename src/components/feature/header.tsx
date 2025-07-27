@@ -33,9 +33,7 @@ export function Header() {
                 href={item.href}
                 className={cn(
                   "transition-colors hover:text-primary",
-                  isActive(item.href) 
-                    ? "text-primary" 
-                    : "text-muted-foreground"
+                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
                 )}
               >
                 {item.name}

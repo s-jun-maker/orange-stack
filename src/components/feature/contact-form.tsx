@@ -47,7 +47,10 @@ export function ContactForm() {
                 id="firstName"
                 name="firstName"
                 placeholder="John"
-                className={state.errors?.firstName ? "border-red-500" : ""}
+                className={`placeholder:text-muted-foreground/60 ${
+                  state.errors?.firstName ? "border-red-500" : ""
+                }`}
+                required
               />
               {state.errors?.firstName && (
                 <p className="text-sm text-red-500">{state.errors.firstName}</p>
@@ -55,7 +58,13 @@ export function ContactForm() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="lastName">Last Name</Label>
-              <Input id="lastName" name="lastName" placeholder="Doe" />
+              <Input
+                id="lastName"
+                name="lastName"
+                placeholder="Doe"
+                className="placeholder:text-muted-foreground/60"
+                required
+              />
             </div>
           </div>
 
@@ -66,7 +75,10 @@ export function ContactForm() {
               id="email"
               name="email"
               placeholder="john@example.com"
-              className={state.errors?.email ? "border-red-500" : ""}
+              className={`placeholder:text-muted-foreground/60 ${
+                state.errors?.email ? "border-red-500" : ""
+              }`}
+              required
             />
             {state.errors?.email && (
               <p className="text-sm text-red-500">{state.errors.email}</p>
@@ -79,6 +91,8 @@ export function ContactForm() {
               id="subject"
               name="subject"
               placeholder="How can we help you?"
+              className="placeholder:text-muted-foreground/60"
+              required
             />
           </div>
 
@@ -89,7 +103,10 @@ export function ContactForm() {
               name="message"
               rows={6}
               placeholder="Tell us about your project or question..."
-              className={`resize-none ${state.errors?.message ? "border-red-500" : ""}`}
+              className={`resize-none placeholder:text-muted-foreground/60 ${
+                state.errors?.message ? "border-red-500" : ""
+              }`}
+              required
             />
             {state.errors?.message && (
               <p className="text-sm text-red-500">{state.errors.message}</p>

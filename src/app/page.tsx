@@ -14,18 +14,19 @@ export default async function Home() {
             Welcome to Orange Stack
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            A blog about technology, development insights, and thoughtful perspectives on the digital world. 
-            Discover tutorials, deep dives, and stories from the intersection of code and creativity.
+            A blog about technology, development insights, and thoughtful
+            perspectives on the digital world. Discover tutorials, deep dives,
+            and stories from the intersection of code and creativity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/posts" 
+            <Link
+              href="/posts"
               className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
             >
               Browse All Posts
             </Link>
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
             >
               Get in Touch
@@ -61,7 +62,7 @@ export default async function Home() {
               ))}
             </div>
             <div className="text-center mt-8">
-              <Link 
+              <Link
                 href="/posts"
                 className="text-primary font-medium hover:text-primary/80 transition-colors"
               >
@@ -77,7 +78,7 @@ export default async function Home() {
             Explore
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link 
+            <Link
               href="/posts"
               className="bg-card rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-border p-6 group hover:translate-y-[-4px]"
             >
@@ -86,11 +87,12 @@ export default async function Home() {
                 Blog Posts
               </h3>
               <p className="text-muted-foreground">
-                Technical insights, tutorials, and thoughts on software development.
+                Technical insights, tutorials, and thoughts on software
+                development.
               </p>
             </Link>
-            
-            <Link 
+
+            <Link
               href="/bbc"
               className="bg-card rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-border p-6 group hover:translate-y-[-4px]"
             >
@@ -102,8 +104,8 @@ export default async function Home() {
                 Curated BBC podcasts, articles, and media content.
               </p>
             </Link>
-            
-            <Link 
+
+            <Link
               href="/contact"
               className="bg-card rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-border p-6 group hover:translate-y-[-4px]"
             >
@@ -112,7 +114,8 @@ export default async function Home() {
                 Contact
               </h3>
               <p className="text-muted-foreground">
-                Get in touch for collaborations, questions, or just to say hello.
+                Get in touch for collaborations, questions, or just to say
+                hello.
               </p>
             </Link>
           </div>

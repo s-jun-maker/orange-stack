@@ -8,7 +8,11 @@ interface BBCPageProps {
 export default async function BBCPage({ searchParams }: BBCPageProps) {
   const { page } = await searchParams;
   const currentPage = Number(page) || 1;
-  const { items: bbcItems, totalCount, hasMore } = await getBBCList(currentPage, 8);
+  const {
+    items: bbcItems,
+    totalCount,
+    hasMore,
+  } = await getBBCList(currentPage, 8);
 
   return (
     <div className="min-h-screen bg-background">
