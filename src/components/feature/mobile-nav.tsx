@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,9 +14,18 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { navigationItems } from "@/lib/navigation";
+import { cn } from "@/lib/utils";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -23,7 +33,7 @@ export function MobileNav() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className="md:hidden hover:bg-transparent"
           aria-label="Open mobile menu"
         >
           <Menu className="h-5 w-5" />
@@ -47,7 +57,12 @@ export function MobileNav() {
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="flex items-center px-4 py-3 text-lg font-medium rounded-2xl transition-all duration-300 hover:bg-card hover:text-primary hover:translate-x-1 text-muted-foreground border border-transparent hover:border-border"
+              className={cn(
+                "flex items-center px-4 py-3 text-lg font-medium rounded-2xl transition-all duration-300 hover:bg-card hover:text-primary hover:translate-x-1 border border-transparent hover:border-border",
+                isActive(item.href)
+                  ? "text-primary bg-card border-border"
+                  : "text-muted-foreground"
+              )}
             >
               {item.name}
             </Link>

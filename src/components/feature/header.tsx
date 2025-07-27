@@ -1,9 +1,22 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/feature/theme-toggle";
 import { MobileNav } from "@/components/feature/mobile-nav";
 import { navigationItems } from "@/lib/navigation";
+import { cn } from "@/lib/utils";
 
 export function Header() {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-16 w-full items-center px-6">
@@ -18,7 +31,12 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="transition-colors hover:text-primary text-muted-foreground"
+                className={cn(
+                  "transition-colors hover:text-primary",
+                  isActive(item.href) 
+                    ? "text-primary" 
+                    : "text-muted-foreground"
+                )}
               >
                 {item.name}
               </Link>
